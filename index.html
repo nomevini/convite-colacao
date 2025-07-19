@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite Colação de Grau - Vinícius de Sousa Carvalho</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.8);
+            border: 2px solid #00ff00;
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            max-width: 600px;
+            box-shadow: 0 0 30px rgba(0, 255, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 0, 0.1), transparent);
+            animation: scan 3s infinite;
+        }
+
+        @keyframes scan {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        h1 {
+            color: #00ff00;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px #00ff00;
+        }
+
+        .subtitle {
+            color: #ffff00;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .info {
+            background: rgba(0, 255, 0, 0.1);
+            border: 1px solid #00ff00;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        .info h3 {
+            color: #00ff00;
+            margin-bottom: 10px;
+        }
+
+        .info p {
+            margin: 5px 0;
+            font-size: 1.1em;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Courier New', monospace;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-confirm {
+            background: linear-gradient(45deg, #00ff00, #00cc00);
+            color: #000;
+        }
+
+        .btn-confirm:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px #00ff00;
+        }
+
+        .btn-decline {
+            background: linear-gradient(45deg, #ff0000, #cc0000);
+            color: #fff;
+        }
+
+        .btn-decline:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px #ff0000;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .message {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            font-weight: bold;
+            display: none;
+        }
+
+        .success {
+            background: rgba(0, 255, 0, 0.2);
+            border: 1px solid #00ff00;
+            color: #00ff00;
+        }
+
+        .error {
+            background: rgba(255, 0, 0, 0.2);
+            border: 1px solid #ff0000;
+            color: #ff0000;
+            animation: shake 0.5s ease-in-out;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            75% { transform: translateX(10px); }
+        }
+
+        .code-comment {
+            color: #888;
+            font-style: italic;
+            margin: 10px 0;
+        }
+
+        .terminal {
+            background: #000;
+            border: 1px solid #00ff00;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            text-align: left;
+        }
+
+        .terminal::before {
+            content: '> ';
+            color: #00ff00;
+        }
+
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container floating">
+        <h1>CONVITE</h1>
+        <h1>🎓 COLAÇÃO DE GRAU 🎓</h1>
+        <div class="subtitle">// Vinícius de Sousa Carvalho - Sistemas de Informação</div>
+        
+        <div class="code-comment">/* Universidade Federal do Piauí */</div>
+        
+        <div class="info">
+            <h3>📅 EVENTO:</h3>
+            <p><strong>Data:</strong> 08 de Agosto de 2024</p>
+            <p><strong>Horário:</strong> 19:00h</p>
+            <p><strong>Local:</strong> Ginásio Poliesportivo Severo Maria Eulálio Filho</p>
+        </div>
+
+        <div class="info">
+            <h3>🎉 CELEBRAÇÃO:</h3>
+            <p><strong>Local:</strong> Oxente Pizzaria</p>
+            <p><strong>Após a cerimônia</strong></p>
+        </div>
+
+        <div class="terminal">
+            console.log("Você está convidado para celebrar esta conquista!");
+        </div>
+
+        <div class="buttons">
+            <button class="btn btn-confirm" onclick="confirmar()">
+                ✅ CONFIRMAR PRESENÇA
+            </button>
+            <button class="btn btn-decline" onclick="recusar()" id="btnRecusar">
+                ❌ RECUSAR (NÃO CLIQUE!)
+            </button>
+        </div>
+
+        <div id="message" class="message"></div>
+    </div>
+
+    <script>
+        let recusas = 0;
+        const mensagensRecusa = [
+            "ERRO 404: Botão errado detectado! Você clicou no botão de RECUSAR!",
+            "ERRO 500: Internal Server Error - Você deveria ter clicado em CONFIRMAR!",
+            "ERRO 403: Acesso negado! Você não pode recusar este convite!",
+            "ERRO 418: I'm a teapot! Mas você não é uma xícara, então compareça!",
+            "ERRO 451: Unavailable For Legal Reasons - É ilegal não comparecer!",
+            "ERRO 999: Você está sendo hackeado! Clique em CONFIRMAR agora!",
+            "ERRO 666: O diabo está tentando te convencer a não ir! Resista!",
+            "ERRO 777: Lucky number! Mas você não terá sorte se não for!",
+            "ERRO 888: Prosperidade só vem para quem comparece!",
+            "ERRO 999: Último aviso! Você está testando minha paciência!"
+        ];
+
+        function confirmar() {
+            const message = document.getElementById('message');
+            message.className = 'message success';
+            message.style.display = 'block';
+            message.innerHTML = `
+                🎉 <strong>SUCESSO!</strong> 🎉<br>
+                console.log("Presença confirmada com sucesso!");<br>
+                <br>
+                <strong>⚠️ ATENÇÃO: Sistema em desenvolvimento! ⚠️</strong><br>
+                <strong>Por favor, confirme sua presença pelo WhatsApp!</strong><br>
+                <strong>O programador ainda não terminou a programação! 😅</strong><br>
+                <br>
+                return "Você fará parte desta celebração incrível!";
+            `;
+            
+            // Desabilitar botão de recusa
+            document.getElementById('btnRecusar').disabled = true;
+            document.getElementById('btnRecusar').style.opacity = '0.5';
+        }
+
+        function recusar() {
+            recusas++;
+            const message = document.getElementById('message');
+            message.className = 'message error';
+            message.style.display = 'block';
+            
+            if (recusas <= mensagensRecusa.length) {
+                message.innerHTML = `
+                    <strong>${mensagensRecusa[recusas - 1]}</strong><br>
+                    <br>
+                    <strong>Você clicou ${recusas} vez(es) no botão errado!</strong><br>
+                    <strong>CLIQUE NO BOTÃO VERDE AGORA!</strong>
+                `;
+            } else {
+                message.innerHTML = `
+                    <strong>ERRO CRÍTICO: Sistema sobrecarregado!</strong><br>
+                    <strong>Você clicou ${recusas} vezes no botão errado!</strong><br>
+                    <strong>EU DESISTO! Mas você ainda deve comparecer!</strong>
+                `;
+            }
+            
+            // Fazer o botão de recusa "fugir" do mouse
+            const btnRecusar = document.getElementById('btnRecusar');
+            btnRecusar.style.position = 'relative';
+            btnRecusar.style.left = Math.random() * 100 - 50 + 'px';
+            btnRecusar.style.top = Math.random() * 100 - 50 + 'px';
+            
+            // Adicionar efeito de shake
+            btnRecusar.style.animation = 'shake 0.5s ease-in-out';
+            setTimeout(() => {
+                btnRecusar.style.animation = '';
+            }, 500);
+        }
+
+        // Efeito de digitação no título
+        function typeWriter(element, text, speed = 100) {
+            let i = 0;
+            element.innerHTML = '';
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            type();
+        }
+
+        // Inicializar efeito de digitação
+        window.onload = function() {
+            const title = document.querySelector('h1');
+            const originalText = title.innerHTML;
+            typeWriter(title, originalText, 50);
+        };
+    </script>
+</body>
+</html> 
